@@ -1,0 +1,20 @@
+make compile issue
+1. can not find opencv head file
+A: opencv 2 is required and export PKG_CONFIG_PATH 
+
+brew install opencv@2
+
+export PKG_CONFIG_PATH="/usr/local/opt/opencv@2/lib/pkgconfig"
+
+
+2. link issue 
+>>>
+1 warning generated.
+ld: library not found for -l:libdarknet.so
+clang: fatal error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [uselib] Error 1
+
+A: update Makefile (refer to commits)
+
+
+
