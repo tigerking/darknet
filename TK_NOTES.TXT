@@ -1,4 +1,4 @@
-make compile issue
+# make compile issue
 1. can not find opencv head file
 A: opencv 2 is required and export PKG_CONFIG_PATH 
 
@@ -18,3 +18,18 @@ A: update Makefile (refer to commits)
 
 
 
+
+# test usage:
+
+1. download pre-trained weights
+mkdir pre-weigths
+cd pre-weigths
+
+wget https://pjreddie.com/media/files/yolov3-tiny.weights
+wget https://pjreddie.com/media/files/yolov3.weights
+cd ..
+
+
+./darknet detect cfg/yolov3-tiny.cfg  ./pre-weigths/yolov3-tiny.weights data/dog.jpg
+
+./darknet detect cfg/yolov3.cfg  ./pre-weigths/yolov3-tiny.weights data/dog.jpg
